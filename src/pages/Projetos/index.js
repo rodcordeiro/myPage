@@ -5,7 +5,10 @@ export default function Projetos(){
     return (
         <div id="container">
            <div className="projetos">
-               <h1>Projetos</h1>
+               <header>
+                    <h1>Projetos</h1>
+                    <a href='/'>Home</a>
+               </header>
                <hr />
 
                 <div className="card">

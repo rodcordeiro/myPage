@@ -8,8 +8,16 @@ export default function MainPage(){
 	function showProjects(e){
 		e.preventDefault();
 		history.push('/projetos');
+    };
+    function showBlog(e){
+		e.preventDefault();
+		history.push('/blog');
 	};
-
+    function showContact(e){
+		e.preventDefault();
+		history.push('/contato');
+    };
+    
 	var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -83,10 +91,10 @@ export default function MainPage(){
 					Projetos
 				</button>
 				
-				<button onClick={showProjects}>
+				<button onClick={showBlog}>
 					Blog
 				</button>
-				<button onClick={showProjects}>
+				<button onClick={showContact}>
 					Contato
 				</button>
 				
