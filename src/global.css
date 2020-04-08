@@ -19,7 +19,7 @@ body{
 	height:80vh;
 	width: 80%;
 	margin: 5% auto;
-	/*border: 1px solid;*/
+	/* border: 1px solid; */
 	display: flex;
 	flex:1;
 	flex-direction: row;

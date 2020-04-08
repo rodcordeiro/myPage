@@ -1,0 +1,21 @@
+.projetos {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.projetos h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.projetos .card{
+    background: #181818;
+    display: flex;
+    flex-direction: row;
+}
+
+.card img{
+    height: 50px;
+    width: 50px;
+}

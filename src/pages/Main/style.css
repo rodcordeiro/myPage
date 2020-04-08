@@ -2,31 +2,31 @@ img{
 	height: 100%;
 	width: auto;
 }
-.data {
+#data {
 	flex-wrap: wrap;
 	width: auto;
 	max-width: 50%;
 	margin: 5%;
 }
-.data h2{
+#data h2{
 	font-size: 40px;
 	font-family: 'Source Code Pro', monospace;
 	padding: 10px;
 }
-.data h3{
+#data h3{
 	margin-top: 5px;
 }
-.data h3::before{
+#data h3::before{
 	content: '→';
 	position: relative;
 	top: -2px;
 }
-.data p{
+#data p{
 	font-family: 'Source Code Pro', monospace;
 	text-align: justify;
 	padding: 20px;
 }
-.data p::first-letter{
+#data p::first-letter{
 	font-size:18px ;
 }
 .links{
@@ -50,6 +50,7 @@ button{
     -7px -7px 20px rgba(255, 255, 255,1),
     inset 0px 0px 4px rgba(255, 255, 255,.2);
 	transition: box-shadow 0.1s ease-in-out;
+	cursor: pointer;
 }	
 button:active {
 	border: none;
@@ -77,7 +78,7 @@ button:active {
 		width: 70%;
 		margin: 20px auto;
 	}
-	.data {
+	#data {
 		flex-wrap: wrap;
 		width: 100%;
 		max-width: 90%;

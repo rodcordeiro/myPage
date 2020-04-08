@@ -66,7 +66,7 @@ export default function MainPage(){
         <div id="container">
 		<img src="https://rodcordeiro.github.io/shares/img/eu.jpg" alt="Minha foto" />
 		
-        <div id="data" class="data">
+        <div id="data">
 			<h2>
 				Rodrigo Cordeiro
 			</h2>
