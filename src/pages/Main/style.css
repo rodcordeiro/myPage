@@ -1,0 +1,94 @@
+img{
+	height: 100%;
+	width: auto;
+}
+.data {
+	flex-wrap: wrap;
+	width: auto;
+	max-width: 50%;
+	margin: 5%;
+}
+.data h2{
+	font-size: 40px;
+	font-family: 'Source Code Pro', monospace;
+	padding: 10px;
+}
+.data h3{
+	margin-top: 5px;
+}
+.data h3::before{
+	content: '→';
+	position: relative;
+	top: -2px;
+}
+.data p{
+	font-family: 'Source Code Pro', monospace;
+	text-align: justify;
+	padding: 20px;
+}
+.data p::first-letter{
+	font-size:18px ;
+}
+.links{
+	margin-top: 20px;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+button{
+	color: #22282b;
+	text-decoration: none;
+	padding: 20px 40px;
+	line-height: 20px;
+	background: none;
+	border: none;
+	border-radius: 9px;
+	box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170,0),
+    inset 0 0 20px rgba(255, 255, 255,0),
+    7px 7px 15px rgba(55, 84, 170,.15),
+    -7px -7px 20px rgba(255, 255, 255,1),
+    inset 0px 0px 4px rgba(255, 255, 255,.2);
+	transition: box-shadow 0.1s ease-in-out;
+}	
+button:active {
+	border: none;
+	outline:none;
+	box-shadow: 
+		  inset 7px 7px 15px rgba(55, 84, 170,.15),
+		  inset -7px -7px 20px rgba(255, 255, 255,1),
+		  0px 0px 4px rgba(255, 255, 255,.2);
+	}
+
+.typewrite .wrap {
+	font-family: 'Roboto Slab', serif;
+	border-right: 0.1em solid #000;
+}
+@media  screen and (max-width: 768px) {
+	#container{
+		height:auto;
+		width: 100%;
+		margin:0;
+		flex-direction: column;
+	}
+
+	img{
+		height: auto;
+		width: 70%;
+		margin: 20px auto;
+	}
+	.data {
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 90%;
+		}
+	.links{
+		flex-direction: column;
+		height: 60%;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.links a{
+		max-width: 30%;
+	}
+}

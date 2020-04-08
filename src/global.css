@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto|Roboto+Slab|Source+Code+Pro&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Source Code Pro', monospace;
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #22282b;
+}
+body{
+	background-color: #22282b;
+}
+#container{
+	height:80vh;
+	width: 80%;
+	margin: 5% auto;
+	/*border: 1px solid;*/
+	display: flex;
+	flex:1;
+	flex-direction: row;
+	background-color: #f1f3f6;
+}
