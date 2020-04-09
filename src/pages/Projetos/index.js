@@ -1,8 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import './style.css';
 
 export default function Projetos(){
+    const projetos =[
+        {
+            id:1,
+            title:"Aurebesh Translator",
+            description: "Um app para transcrever o que foi dito para aurebesh.",
+            link:"https://rodcordeiro.github.io/Projects/Aurebesh/",
+            img:"https://rodcordeiro.github.io/Projects/Aurebesh/Arquivos/SithEmblemTOR.png"
+        },
+        {
+            id:2,
+            title:"Projeto Teste",
+            description: "Um projeto de teste",
+            link:"/projetos",
+            img:"https://rodcordeiro.github.io/shares/img/avatar.png"
+        },
+        {
+            id:3,
+            title:"Projeto Teste",
+            description: "Um projeto de teste",
+            link:"/projetos",
+            img:"https://rodcordeiro.github.io/shares/img/avatar.png"
+        }
+    ]
+
     return (
         <div className="projectContent">
            <div className="projetos">
@@ -11,52 +36,27 @@ export default function Projetos(){
                     <a href='/'>Home</a>
                </header>
                <hr />
-
-               <div className="card">
-                    <img alt="Img do projeto" src="https://rodcordeiro.github.io/shares/img/avatar.png" />
+                {projetos.map(projeto => (
+                    <div className="card">
+                    <img alt="Img do projeto" src={projeto.img} />
                     <div className="desc">
-                        <h3>Projeto</h3>
+                        <h3>{projeto.title}</h3>
                         <p>
-                        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mé, boa gentis num é. Paisis, filhis, espiritis santis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
+                        {projeto.description}
                         <br />
-                        Veja mais <FiLogIn />
+                        <Link 
+                            to={projeto.link}
+                            className='plink'
+                        >
+                            Veja mais 
+                            <FiLogIn />
+                        </Link>
                         </p>
                     </div>
                 </div>
-               <div className="card">
-                    <img alt="Img do projeto" src="https://rodcordeiro.github.io/shares/img/avatar.png" />
-                    <div className="desc">
-                        <h3>Projeto</h3>
-                        <p>
-                        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mé, boa gentis num é. Paisis, filhis, espiritis santis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
-                        <br />
-                        Veja mais <FiLogIn />
-                        </p>
-                    </div>
-                </div>
-               <div className="card">
-                    <img alt="Img do projeto" src="https://rodcordeiro.github.io/shares/img/avatar.png" />
-                    <div className="desc">
-                        <h3>Projeto</h3>
-                        <p>
-                        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mé, boa gentis num é. Paisis, filhis, espiritis santis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
-                        <br />
-                        Veja mais <FiLogIn />
-                        </p>
-                    </div>
-                </div>
-               <div className="card">
-                    <img alt="Img do projeto" src="https://rodcordeiro.github.io/shares/img/avatar.png" />
-                    <div className="desc">
-                        <h3>Projeto</h3>
-                        <p>
-                        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mé, boa gentis num é. Paisis, filhis, espiritis santis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
-                        <br />
-                        Veja mais <FiLogIn />
-                        </p>
-                    </div>
-                </div>
-                
+                ))};
+               
+        
             
            </div>
         </div>
