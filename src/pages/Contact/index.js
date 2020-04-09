@@ -6,7 +6,8 @@ export default function Contact(){
         <div id="container">
            <div className="projetos">
                <h1>Contact Session</h1>
-               <p> Ainda em desenvolvimento, mas qualquer coisa manda e-mail para <a href="mailto:rodrigomendoncca@gmail.com&subject=Sobre%20seu%20portfolio">rodrigomendoncca@gmail.com</a></p>
+               <p> Ainda em desenvolvimento, mas qualquer coisa manda e-mail para <a href="mailto:rodrigomendoncca@gmail.com?subject=Sobre%20seu%20portfolio">rodrigomendoncca@gmail.com</a></p>
+               <br />
                <a href='/'>Home</a>
            </div>
         </div>

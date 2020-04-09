@@ -12,7 +12,7 @@ export default function Projetos(){
                <hr />
 
                 <div className="card">
-                    <img src="https://rodcordeiro.github.io/shares/img/avatar.png" />
+                    <img alt="Img do projeto" src="https://rodcordeiro.github.io/shares/img/avatar.png" />
                     <div className="desc">
                         <h3>Projeto</h3>
                         <p>

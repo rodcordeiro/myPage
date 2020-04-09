@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import './style.css';
 
 export default function MainPage(){
-	const history = useHistory();
-	function showProjects(e){
+    
+    const history = useHistory();
+    
+    function showProjects(e){
 		e.preventDefault();
 		history.push('/projetos');
     };
@@ -18,7 +20,24 @@ export default function MainPage(){
 		history.push('/contato');
     };
     
-	var TxtType = function(el, toRotate, period) {
+    
+    const [idade, setIdade] = useState("Calculando..");
+    function calculaIdade(){
+        var now = new Date()
+        var ano = now.getFullYear()
+        var nasc = "1998"
+        var mes = now.getMonth()
+
+        if (mes >= "9"){
+            var age = ano - nasc
+        } else {
+            var ano1 = ano -1
+            var age = ano1 -  nasc
+        }
+        setIdade(age);
+    }
+
+    var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -68,8 +87,10 @@ export default function MainPage(){
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-
+        calculaIdade();
     };
+    
+    
     return (
         <div id="container">
 		<img src="https://rodcordeiro.github.io/shares/img/eu.jpg" alt="Minha foto" />
@@ -83,8 +104,8 @@ export default function MainPage(){
 				<span class="wrap"></span>
 			</h3>
 			
-			<p>
-				Rodrigo de Mendonça Cordeiro, <span id="idade"></span> anos, nascido em São Paulo. Amante da arte e dos rabiscos desde que me entendo por gente, descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web do curso técnico em Comunicação Visual.
+			<p >
+				Rodrigo de Mendonça Cordeiro, {idade} anos, nascido em São Paulo. Amante da arte e dos rabiscos desde que me entendo por gente, descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web do curso técnico em Comunicação Visual.
 			</p>
 			<div class="links">
 				<button onClick={showProjects}>
