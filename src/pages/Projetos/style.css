@@ -1,3 +1,14 @@
+.projectContent{
+	min-height:80vh;
+	width: 80%;
+	margin: 5% auto;
+	/* border: 1px solid; */
+	display: flex;
+	flex:1;
+	flex-direction: row;
+	background-color: #f1f3f6;
+}
+	
 .projetos {
     display: flex;
     flex-direction: column;
@@ -9,12 +20,32 @@
 }
 
 .projetos .card{
-    background: rgb(103, 172, 252);
+    /* background: rgb(103, 172, 252); */
+    background: none;
+	border: none;
+	border-radius: 9px;
+	box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170,0),
+    inset 0 0 20px rgba(255, 255, 255,0),
+    7px 7px 15px rgba(55, 84, 170,.15),
+    -7px -7px 20px rgba(255, 255, 255,1),
+    inset 0px 0px 4px rgba(255, 255, 255,.2);
+    transition: box-shadow 0.1s ease-in-out;
     display: flex;
     flex-direction: row;
+    height: 120px;
+    
+    width: 80%;
+    margin: 15px auto;
 }
 
 .card img{
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: auto;
+}
+.card .desc{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    
 }

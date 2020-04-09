@@ -92,7 +92,7 @@ export default function MainPage(){
     
     
     return (
-        <div id="container">
+        <div className="mainContent">
 		<img src="https://rodcordeiro.github.io/shares/img/eu.jpg" alt="Minha foto" />
 		
         <div id="data">
@@ -100,12 +100,15 @@ export default function MainPage(){
 				Rodrigo Cordeiro
 			</h2>
 			<hr />
-			<h3 class="typewrite" data-period="1500" data-type='[ "WebDeveloper", "FullStack", "Tatuador", "Desenhista" ]'>
+			<h3 class="typewrite" data-period="1300" data-type='[ "WebDeveloper", "FullStack", "Tatuador", "Desenhista" ]'>
 				<span class="wrap"></span>
 			</h3>
 			
 			<p >
-				Rodrigo de Mendonça Cordeiro, {idade} anos, nascido em São Paulo. Amante da arte e dos rabiscos desde que me entendo por gente, descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web do curso técnico em Comunicação Visual.
+				Rodrigo de Mendonça Cordeiro, {idade} anos, nascido em São Paulo.
+                Amante da arte e dos rabiscos desde que me entendo por gente, 
+                descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web 
+                do curso técnico em Comunicação Visual.
 			</p>
 			<div class="links">
 				<button onClick={showProjects}>
