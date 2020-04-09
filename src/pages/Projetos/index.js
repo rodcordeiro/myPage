@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiLogIn } from 'react-icons/fi';
+import { FiLogIn, FiHome } from 'react-icons/fi';
 import './style.css';
 
 export default function Projetos(){
@@ -14,26 +14,34 @@ export default function Projetos(){
         },
         {
             id:2,
-            title:"Projeto Teste",
-            description: "Um projeto de teste",
-            link:"/projetos",
-            img:"https://rodcordeiro.github.io/shares/img/avatar.png"
+            title:"Daedric Translator",
+            description: "Um app para transcrever o que foi dito para Daedric.",
+            link:"https://rodcordeiro.github.io/Projects/Daedric/",
+            img:"https://rodcordeiro.github.io/Projects/Daedric/Arquivos/skyrim-icon-41570.png"
         },
         {
             id:3,
-            title:"Projeto Teste",
-            description: "Um projeto de teste",
+            title:"Be the hero!",
+            description: "Projeto voltado para ongs que poderão cadastrar casos para quem tiver interesse em ajudar.",
             link:"/projetos",
-            img:"https://rodcordeiro.github.io/shares/img/avatar.png"
+            img:"./heroes.png"
         }
     ]
-
+    function showHome(e){
+        e.preventDefault();
+    }
     return (
         <div className="projectContent">
            <div className="projetos">
                <header>
                     <h1>Projetos</h1>
-                    <a href='/'>Home</a>
+                    <Link 
+                        to={'/'}
+                        className="homeButton"
+                        onClick={showHome}
+                    >
+                        <FiHome />
+                    </Link>
                </header>
                <hr />
                 {projetos.map(projeto => (
@@ -44,13 +52,14 @@ export default function Projetos(){
                         <p>
                         {projeto.description}
                         <br />
-                        <Link 
-                            to={projeto.link}
-                            className='plink'
+                        
+                        <a 
+                            href={projeto.link}
+                            className='link'
                         >
                             Veja mais 
-                            <FiLogIn />
-                        </Link>
+                            <FiLogIn className="link_icon"/>
+                        </a>
                         </p>
                     </div>
                 </div>

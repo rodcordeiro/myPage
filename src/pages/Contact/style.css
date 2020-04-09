@@ -65,31 +65,15 @@ button:active {
 	font-family: 'Roboto Slab', serif;
 	border-right: 0.1em solid #000;
 }
+
 @media  screen and (max-width: 768px) {
-	#container{
-		height:auto;
+	.projectContent{
+		height:100%;
 		width: 100%;
 		margin:0;
 		flex-direction: column;
-	}
-
-	img{
-		height: auto;
-		width: 70%;
-		margin: 20px auto;
-	}
-	#data {
-		flex-wrap: wrap;
-		width: 100%;
-		max-width: 90%;
-		}
-	.links{
-		flex-direction: column;
-		height: 60%;
-		justify-content: space-around;
-		align-items: center;
-	}
-	.links a{
-		max-width: 30%;
+    }
+    .projetos {
+        width: 100%;
 	}
 }

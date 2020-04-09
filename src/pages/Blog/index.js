@@ -3,7 +3,7 @@ import './style.css';
 
 export default function Blog(){
     return (
-        <div id="container">
+        <div className="projectContent">
            <div className="projetos">
                <h1>Aqui vai o blog</h1>
                
