@@ -78,7 +78,7 @@ export default function MainPage(){
         }, delta);
     };
 
-    window.onload = function() {
+    function type() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
@@ -92,7 +92,7 @@ export default function MainPage(){
     
     
     return (
-        <div className="mainContent">
+        <div onLoad={type} className="mainContent">
 		<img src="https://rodcordeiro.github.io/shares/img/eu.jpg" alt="Minha foto" />
 		
         <div id="data">

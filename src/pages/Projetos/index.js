@@ -23,13 +23,18 @@ export default function Projetos(){
             id:3,
             title:"Be the hero!",
             description: "Projeto voltado para ongs que poderão cadastrar casos para quem tiver interesse em ajudar.",
-            link:"/projetos",
-            img:"./heroes.png"
+            link:"http://cordeiro-bethehero-frontend.herokuapp.com/",
+            img:"https://rodcordeiro.github.io/shares/img/heroes.png"
+        },
+        {
+            id:4,
+            title:"Rock & Burger",
+            description: "Projeto voltado para ongs que poderão cadastrar casos para quem tiver interesse em ajudar.",
+            link:"https://rodcordeiro.github.io/Projects/Rock&Burguer/index.html",
+            img:"https://rodcordeiro.github.io/Projects/Rock&Burguer/images/logo_oficial-u970.png"
         }
     ]
-    function showHome(e){
-        e.preventDefault();
-    }
+    
     return (
         <div className="projectContent">
            <div className="projetos">
@@ -56,6 +61,7 @@ export default function Projetos(){
                         <a 
                             href={projeto.link}
                             className='link'
+                            target="_blank"
                         >
                             Veja mais 
                             <FiLogIn className="link_icon"/>
