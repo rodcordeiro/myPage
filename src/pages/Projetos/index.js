@@ -38,7 +38,7 @@ export default function Projetos(){
                     <Link 
                         to={'/'}
                         className="homeButton"
-                        onClick={showHome}
+                        // onClick={showHome}
                     >
                         <FiHome />
                     </Link>
