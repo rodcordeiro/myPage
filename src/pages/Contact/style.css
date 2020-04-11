@@ -9,37 +9,37 @@
 	background-color: #f1f3f6;
 }
 	
-.contact {
+.contacts {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
 }
-.contact header{
+.contacts header{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
 }
-.contact header .homeButton{
+.contacts header .homeButton{
     font-size: 25px;
     align-self: center;
 }
-.contact h1{
+.contacts h1{
     padding: 20px;
 }
 
-.contact .card{
+.contacts .card{
     /* background: rgb(103, 172, 252); */
     background: none;
 	border: none;
 	border-radius: 9px;
 	box-shadow: 
-    inset 0 0 15px rgba(55, 84, 170,0),
-    inset 0 0 20px rgba(255, 255, 255,0),
+    insest 0 0 15px rgba(55, 84, 170,0),
+    insest 0 0 20px rgba(255, 255, 255,0),
     7px 7px 15px rgba(55, 84, 170,.15),
     -7px -7px 20px rgba(255, 255, 255,1),
-    inset 0px 0px 4px rgba(255, 255, 255,.2);
+    insest 0px 0px 4px rgba(255, 255, 255,.2);
     transition: box-shadow 0.1s ease-in-out;
     display: flex;
     flex-direction: row;
@@ -87,10 +87,10 @@
 		margin:0;
 		flex-direction: column;
     }
-    .contact {
+    .contacts {
         width: 100%;
     }
-    .contact .card{
+    .contacts .card{
         width: 90%;
     }
 }
