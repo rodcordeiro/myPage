@@ -6,7 +6,7 @@ import './style.css';
 export default function Contact(){
     return (
         <div className="contactContent">
-           <div className="projetos">
+           <div className="contact">
                <header>
                     <h1>Contato</h1>
                     <Link 

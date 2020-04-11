@@ -9,27 +9,27 @@
 	background-color: #f1f3f6;
 }
 	
-.projetos {
+.contact {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
 }
-.projetos header{
+.contact header{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
 }
-.projetos header .homeButton{
+.contact header .homeButton{
     font-size: 25px;
     align-self: center;
 }
-.projetos h1{
+.contact h1{
     padding: 20px;
 }
 
-.projetos .card{
+.contact .card{
     /* background: rgb(103, 172, 252); */
     background: none;
 	border: none;
@@ -87,10 +87,10 @@
 		margin:0;
 		flex-direction: column;
     }
-    .projetos {
+    .contact {
         width: 100%;
     }
-    .projetos .card{
+    .contact .card{
         width: 90%;
     }
 }
