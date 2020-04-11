@@ -10,6 +10,7 @@ export default function Projetos(){
             title:"Aurebesh Translator",
             description: "Um app para transcrever o que foi dito para aurebesh.",
             link:"https://rodcordeiro.github.io/Projects/Aurebesh/",
+            github:"https://github.com/rodcordeiro/Projects/Aurebesh/",
             img:"https://rodcordeiro.github.io/Projects/Aurebesh/Arquivos/SithEmblemTOR.png"
         },
         {
@@ -17,6 +18,7 @@ export default function Projetos(){
             title:"Daedric Translator",
             description: "Um app para transcrever o que foi dito para Daedric.",
             link:"https://rodcordeiro.github.io/Projects/Daedric/",
+            github:"https://github.com/rodcordeiro/Projects/Daedric/",
             img:"https://rodcordeiro.github.io/Projects/Daedric/Arquivos/skyrim-icon-41570.png"
         },
         {
@@ -24,6 +26,7 @@ export default function Projetos(){
             title:"Be the hero!",
             description: "Projeto voltado para ongs que poderão cadastrar casos para quem tiver interesse em ajudar.",
             link:"http://cordeiro-bethehero-frontend.herokuapp.com/",
+            github:"https://github.com/rodcordeiro/BeTheHero",
             img:"https://rodcordeiro.github.io/shares/img/heroes.png"
         },
         {
@@ -31,6 +34,7 @@ export default function Projetos(){
             title:"Rock & Burger",
             description: "Projeto voltado para ongs que poderão cadastrar casos para quem tiver interesse em ajudar.",
             link:"https://rodcordeiro.github.io/Projects/Rock&Burguer/index.html",
+            github:"https://github.com/rodcordeiro/Projects/Rock&Burguer/",
             img:"https://rodcordeiro.github.io/Projects/Rock&Burguer/images/logo_oficial-u970.png"
         }
     ]
@@ -56,24 +60,20 @@ export default function Projetos(){
                         <h3>{projeto.title}</h3>
                         <p>
                         {projeto.description}
-                        <br />
-                        
+                        </p>
                         <a 
                             href={projeto.link}
                             className='link'
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Veja mais 
                             <FiLogIn className="link_icon"/>
                         </a>
-                        </p>
                     </div>
                 </div>
                 ))};
-               
-        
-            
-           </div>
+            </div>
         </div>
     );
 };

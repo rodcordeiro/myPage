@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiLogIn, FiHome } from 'react-icons/fi';
+import { FiHome } from 'react-icons/fi';
 import './style.css';
 
 export default function Contact(){
     return (
-        <div className="projectContent">
+        <div className="contactContent">
            <div className="projetos">
                <header>
                     <h1>Contato</h1>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiLogIn, FiHome } from 'react-icons/fi';
+import {  FiHome } from 'react-icons/fi';
 import './style.css';
 
 export default function Blog(){
