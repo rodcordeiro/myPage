@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiLogIn, FiHome } from 'react-icons/fi';
 import './style.css';
@@ -6,7 +6,24 @@ import './style.css';
 import api from '../../services/api';
 
 export default function Projetos(){
-    const [projects, setProjects] = useState();
+    const [projects, setProjects] = useState([]);
+    
+    async function loadProjects(){
+        try{
+            await api.get('projects').then(response => {
+                setProjects(response.data);
+                console.log(response.data);
+            })    
+        } catch (err){
+            console.log({
+                log: "Não rolou",
+                code: err.code,
+                message: err.message
+            });
+        }
+        
+    }
+
     const projetos =[
         {
             id:1,
@@ -43,8 +60,8 @@ export default function Projetos(){
     ]
     
     return (
-        const proj = api.get('/projects').then(response => setProjects(response.data));
-        <div className="projectContent">
+        
+        <div className="projectContent" onLoad={loadProjects}>
            <div className="projetos">
                <header>
                     <h1>Projetos</h1>
@@ -58,7 +75,7 @@ export default function Projetos(){
                </header>
                <hr />
                 {projetos.map(projeto => (
-                    <div className="card">
+                    <div className="card" key={projeto.id}>
                     <img alt="Img do projeto" src={projeto.img} />
                     <div className="desc">
                         <h3>{projeto.title}</h3>
@@ -76,7 +93,7 @@ export default function Projetos(){
                         </a>
                     </div>
                 </div>
-                ))};
+                ))}
             </div>
         </div>
     );
