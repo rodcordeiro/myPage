@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiLogIn, FiHome } from 'react-icons/fi';
 import './style.css';
 
+import api from '../../services/api';
+
 export default function Projetos(){
+    const [projects, setProjects] = useState();
     const projetos =[
         {
             id:1,
@@ -40,6 +43,7 @@ export default function Projetos(){
     ]
     
     return (
+        const proj = api.get('/projects').then(response => setProjects(response.data));
         <div className="projectContent">
            <div className="projetos">
                <header>
