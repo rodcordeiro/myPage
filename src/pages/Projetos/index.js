@@ -3,26 +3,20 @@ import { Link } from 'react-router-dom';
 import { FiLogIn, FiHome } from 'react-icons/fi';
 import './style.css';
 
-import api from '../../services/api';
+import unirest from 'unirest';
 
 export default function Projetos(){
     const [projects, setProjects] = useState([]);
     
     async function loadProjects(){
-        try{
-            await api.get('projects').then(response => {
-                setProjects(response.data);
-                console.log(response.data);
-            })    
-        } catch (err){
-            console.log({
-                log: "Não rolou",
-                code: err.code,
-                message: err.message
-            });
+        unirest.get('http://localhost:3333/projects')
+            .then((response) => {
+                setProjects(response.body)
+                
+            })
+            console.log(projects)
         }
-        
-    }
+    
 
     const projetos =[
         {
@@ -97,4 +91,4 @@ export default function Projetos(){
             </div>
         </div>
     );
-};
+                }
