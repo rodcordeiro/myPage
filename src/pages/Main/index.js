@@ -4,9 +4,9 @@ import { useHistory } from 'react-router-dom';
 import './style.css';
 
 export default function MainPage(){
-    
+
     const history = useHistory();
-    
+
     function showProjects(e){
 		e.preventDefault();
 		history.push('/projetos');
@@ -19,9 +19,10 @@ export default function MainPage(){
 		e.preventDefault();
 		history.push('/contato');
     };
-    
-    
+
+
     const [idade, setIdade] = useState("Calculando..");
+
     function calculaIdade(){
         var now = new Date()
         var ano = now.getFullYear()
@@ -89,12 +90,12 @@ export default function MainPage(){
         }
         calculaIdade();
     };
-    
-    
+
+
     return (
         <div onLoad={type} className="mainContent">
 		<img src="https://rodcordeiro.github.io/shares/img/eu.jpg" alt="Minha foto" />
-		
+
         <div id="data">
 			<h2>
 				Rodrigo Cordeiro
@@ -103,30 +104,30 @@ export default function MainPage(){
 			<h3 class="typewrite" data-period="1300" data-type='[ "WebDeveloper", "FullStack", "Tatuador", "Desenhista" ]'>
 				<span class="wrap"></span>
 			</h3>
-			
+
 			<p >
 				Rodrigo de Mendonça Cordeiro, {idade} anos, nascido em São Paulo.
-                Amante da arte e dos rabiscos desde que me entendo por gente, 
-                descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web 
+                Amante da arte e dos rabiscos desde que me entendo por gente,
+                descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web
                 do curso técnico em Comunicação Visual.
 			</p>
 			<div class="links">
 				<button onClick={showProjects}>
 					Projetos
 				</button>
-				
+
 				<button onClick={showBlog}>
 					Blog
 				</button>
 				<button onClick={showContact}>
 					Contato
 				</button>
-				
+
 			</div>
 
 
 		</div>
-		
+
 	</div>
     );
 }
