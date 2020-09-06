@@ -1,11 +1,16 @@
 @import url('http://rodcordeiro.github.io/shares/fonts/TheAbsolute/font.css');
 #alert{
-	color: red;
+	color: black;
+	background-color: white;
+	border: 10px solid red;
+	border-top-width: 25px;
 	position: absolute;
 	top: 5%;
 	right: 5%;
-	font-size: 3rem;
-	font-family: 'The absolute', serif;
+	font-size: 2em;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-family: 'The absolute', sans-serif;
 }
 
 .mainContent{
