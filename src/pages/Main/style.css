@@ -1,3 +1,13 @@
+@import url('http://rodcordeiro.github.io/shares/fonts/TheAbsolute/font.css');
+#alert{
+	color: red;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	font-size: 3rem;
+	font-family: 'The absolute', serif;
+}
+
 .mainContent{
 	height:80vh;
 	width: 80%;
@@ -9,14 +19,13 @@
 }
 
 img{
-	height:10vh;
+	height:100%;
 	width: auto;
 }
 #data {
 	flex-wrap: wrap;
 	width: auto;
-	max-width: 50%;
-	margin: 5%;
+	margin: 20px;
 }
 #data h2{
 	font-size: 40px;
@@ -39,41 +48,18 @@ img{
 #data p::first-letter{
 	font-size:18px ;
 }
-.links{
-	margin-top: 20px;
-	display: flex;
-	width: 100%;
-	justify-content: space-around;
-}
-button{
-	color: #22282b;
-	text-decoration: none;
-	padding: 20px 40px;
-	line-height: 20px;
-	background: none;
-	border: none;
-	border-radius: 9px;
-	box-shadow: 
-    inset 0 0 15px rgba(55, 84, 170,0),
-    inset 0 0 20px rgba(255, 255, 255,0),
-    7px 7px 15px rgba(55, 84, 170,.15),
-    -7px -7px 20px rgba(255, 255, 255,1),
-    inset 0px 0px 4px rgba(255, 255, 255,.2);
-	transition: box-shadow 0.1s ease-in-out;
-	cursor: pointer;
-}	
-button:active {
-	border: none;
-	outline:none;
-	box-shadow: 
-		  inset 7px 7px 15px rgba(55, 84, 170,.15),
-		  inset -7px -7px 20px rgba(255, 255, 255,1),
-		  0px 0px 4px rgba(255, 255, 255,.2);
-	}
-
 .typewrite .wrap {
 	font-family: 'Roboto Slab', serif;
 	border-right: 0.1em solid #000;
+}
+
+
+#contatos{
+	width: 80%;
+	margin: 20px ;
+}
+.contact{
+	padding: 5px 10px;
 }
 @media  screen and (max-width: 768px) {
 	.mainContent{
@@ -93,13 +79,12 @@ button:active {
 		width: 100%;
 		max-width: 90%;
 		}
-	.mainContent .links{
-		flex-direction: column;
-		height: 60%;
-		justify-content: space-around;
-		align-items: center;
-	}
-	.mainContent .links a{
-		max-width: 30%;
+	#alert{
+		color: red;
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		font-size: 2rem;
+		font-family: 'The absolute', serif;
 	}
 }

@@ -1,42 +1,13 @@
 import React,{ useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub, SiSkype } from "react-icons/si";
+import calculaIdade from '../../utils/calcAge';
 
 import './style.css';
 
 export default function MainPage(){
-
-    const history = useHistory();
-
-    function showProjects(e){
-		e.preventDefault();
-		history.push('/projetos');
-    };
-    function showBlog(e){
-		e.preventDefault();
-		history.push('/blog');
-	};
-    function showContact(e){
-		e.preventDefault();
-		history.push('/contato');
-    };
-
-
     const [idade, setIdade] = useState("Calculando..");
-
-    function calculaIdade(){
-        var now = new Date()
-        var ano = now.getFullYear()
-        var nasc = "1998"
-        var mes = now.getMonth()
-
-        if (mes >= "9"){
-            var age = ano - nasc
-        } else {
-            var ano1 = ano -1
-            var age = ano1 -  nasc
-        }
-        setIdade(age);
-    }
 
     var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -88,7 +59,7 @@ export default function MainPage(){
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        calculaIdade();
+        setIdade(calculaIdade);
     };
 
 
@@ -101,33 +72,48 @@ export default function MainPage(){
 				Rodrigo Cordeiro
 			</h2>
 			<hr />
-			<h3 class="typewrite" data-period="1300" data-type='[ "WebDeveloper", "FullStack", "Tatuador", "Desenhista" ]'>
-				<span class="wrap"></span>
+			<h3 className="typewrite" data-period="1300" data-type='[ "WebDeveloper", "FullStack", "Tatuador", "Desenhista" ]'>
+				<span className="wrap"></span>
 			</h3>
 
 			<p >
 				Rodrigo de Mendonça Cordeiro, {idade} anos, nascido em São Paulo.
                 Amante da arte e dos rabiscos desde que me entendo por gente,
                 descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web
-                do curso técnico em Comunicação Visual.
+                do curso técnico em Comunicação Visual e desde então tenho me apaixonado cada vez mais por ver através da matrix.
 			</p>
-			<div class="links">
-				<button onClick={showProjects}>
-					Projetos
-				</button>
+            <span id="alert">Este site ainda está em construção</span>
+            <div id="contatos">
+            <div className="contact"> 
+                       <a href="mailto:rodrigomendoncca@gmail.com">
+                           <SiGmail /> rodrigomendoncca@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div className="contact"> 
+                        <SiWhatsapp /> 
+                        <span>(11) 9 6918-7148</span>
+                    </div>
+                    <div className="contact"> 
+                        <SiSkype />
+                        <span>RodrigoM.Cordeiro</span>
+                    </div>
+                    
+                    <div className="contact"> 
+                        <a href="https://www.linkedin.com/in/rodrigomcordeiro/">
+                            <SiLinkedin /> /rodrigomcordeiro
+                        </a>
+                    </div>
+                    <div className="contact">
+                        <a href="https://github.com/rodcordeiro">
+                            <SiGithub />
+                            <span>/rodcordeiro</span>
+                        </a>
+                    </div>
 
-				<button onClick={showBlog}>
-					Blog
-				</button>
-				<button onClick={showContact}>
-					Contato
-				</button>
-
-			</div>
-
-
+                    
+            </div>
 		</div>
-
 	</div>
     );
 }

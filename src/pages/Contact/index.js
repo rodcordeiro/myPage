@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { FiHome } from 'react-icons/fi';
-import {  FaWhatsapp, FaMailBulk, FaLinkedinIn, FaTelegramPlane, FaDiscord, FaGithub, FaSkype, FaAddressCard } from 'react-icons/fa';
+import {  SiWhatsapp, SiGmail, SiLinkedin, FaTelegramPlane, FaDiscord, FaGithub, FaSkype, FaAddressCard } from 'react-icons/fa';
 
 import './style.css';
 
@@ -25,7 +24,7 @@ export default function Contact(){
                
                     <div className="contact"> 
                        <a href="mailto:rodrigomendoncca@gmail.com">
-                           <FaMailBulk /> rodrigomendoncca@gmail.com
+                           <SiGmail /> rodrigomendoncca@gmail.com
                         </a>
                     </div>
                     
@@ -43,7 +42,7 @@ export default function Contact(){
                     
                     <div className="contact"> 
                         <a href="https://www.linkedin.com/in/rodrigomcordeiro/">
-                            <FaLinkedinIn /> /rodrigomcordeiro
+                            <SiLinkedin /> /rodrigomcordeiro
                         </a>
                     </div>
                     
