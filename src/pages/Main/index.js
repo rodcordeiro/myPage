@@ -1,6 +1,4 @@
 import React,{ useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub, SiSkype } from "react-icons/si";
 import calculaIdade from '../../utils/calcAge';
 
