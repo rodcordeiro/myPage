@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import MainPage from './pages/Main';
 import LoginPage from './pages/Login';
+import MainDashPage from './pages/Dashboard/Main'
+
 
 
 export default function Routes() {
@@ -11,6 +13,7 @@ export default function Routes() {
         <Switch>
             <Route path="/" exact component={MainPage}/>
             <Route path="/login"  component={LoginPage}/>
+            <Route path="/dashboard"  component={MainDashPage}/>
         </Switch>
         </BrowserRouter>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import api from '../../utils/api'
 
@@ -7,7 +8,8 @@ import './style.css'
 export default function LoginPage(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    
+    const history = useHistory();
+
     async function handleLogin(e){
         e.preventDefault();
         let userObj = {
@@ -15,11 +17,12 @@ export default function LoginPage(){
             password
         }
         if(!username || !password){
-            alert("You must provide the username and Password")
+            return alert("You must provide the username and Password")
         }
         await api.post('/users/auth',userObj)
         .then(response=>{
-            console.log(response.data)
+            localStorage.setItem('token',response.data.token)
+            history.push('/dashboard')
         })
         .catch(err=>{
             throw new Error(err)
@@ -29,6 +32,10 @@ export default function LoginPage(){
     return (
         <div className="loginContainer">
             <form method="post" onSubmit={(e)=>handleLogin(e)}>
+                <img 
+                    src="https://rodcordeiro.github.io/shares/img/RC-W.png"
+                    alt="Logo"
+                />
                 <input 
                     type='text'
                     value={username}
