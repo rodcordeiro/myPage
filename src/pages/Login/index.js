@@ -25,7 +25,7 @@ export default function LoginPage(){
             history.push('/dashboard')
         })
         .catch(err=>{
-            throw new Error(err)
+            alert(err)
         })
     }
 
