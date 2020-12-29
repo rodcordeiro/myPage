@@ -6,8 +6,12 @@ import './style.css';
 
 export default function MainPage(){
     return (
-        <div className="mainPage">
-            <Header/>
-		</div>
+        <section className="mainPage">
+            <Header class="header"/>
+            <section className="main-content">
+                
+
+            </section>
+		</section>
     );
 }

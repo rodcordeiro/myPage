@@ -5,6 +5,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #181818;
 }
 
 .loginContainer form{
