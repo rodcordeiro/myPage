@@ -90,7 +90,7 @@ export default function MainPage(){
                     
                     <div className="contact"> 
                         <SiWhatsapp /> 
-                        <span>(11) 9 6918-7148</span>
+                        <span>(11) 9 8264-5275</span>
                     </div>
                     <div className="contact"> 
                         <SiSkype />
