@@ -1,18 +1,19 @@
 {
-  "name": "website",
+  "name": "rod_homepage",
   "version": "0.1.0",
   "private": true,
+  "author":"Rodrigo Cordeiro <rodrigomendoncca@gmail.com> (http://rodcordeiro.com.br)",
+  "repository": "github:rodcordeiro/myPage",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.1",
-    "unirest": "^0.6.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

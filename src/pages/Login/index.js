@@ -21,8 +21,12 @@ export default function LoginPage(){
         }
         await api.post('/users/auth',userObj)
         .then(response=>{
-            localStorage.setItem('token',response.data.token)
-            history.push('/dashboard')
+            if(response.data.token){
+                localStorage.setItem('token',response.data.token)
+                history.push('/dashboard')
+            } else{
+                alert("Houston! We got a problem here...")
+            }
         })
         .catch(err=>{
             alert(err)
@@ -30,27 +34,28 @@ export default function LoginPage(){
     }
 
     return (
-        <div className="loginContainer">
-            <form method="post" onSubmit={(e)=>handleLogin(e)}>
-                <img 
-                    src="https://rodcordeiro.github.io/shares/img/RC-W.png"
-                    alt="Logo"
-                />
-                <input 
-                    type='text'
-                    value={username}
-                    onChange={(e)=>setUsername(e.target.value)}
-                    placeholder="Username"
-                />
-                <input 
-                    type='password'
-                    value={password}
-                    onChange={(e)=>setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button>Login</button>
+            <div className="loginContainer">
+                <form method="post" onSubmit={(e)=>handleLogin(e)}>
+                    <img 
+                        src="https://rodcordeiro.github.io/shares/img/RC-W.png"
+                        alt="Logo"
+                    />
+                    <input 
+                        type='text'
+                        value={username}
+                        onChange={(e)=>setUsername(e.target.value)}
+                        placeholder="Username"
+                    />
+                    <input 
+                        type='password'
+                        value={password}
+                        onChange={(e)=>setPassword(e.target.value)}
+                        placeholder="Password"
+                    />
+                    <button>Login</button>
 
-            </form>
-        </div>
-    )
+                </form>
+            </div>
+        )
+
 }

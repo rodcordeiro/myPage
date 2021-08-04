@@ -3,8 +3,9 @@ import React from 'react';
 import './style.css';
 
 export default function ErrorPage({ location }){
+    
     return (
-        <div className="mainContent">
+        <div className="Page404">
             <h1>
                 Error Loading Page
             </h1>

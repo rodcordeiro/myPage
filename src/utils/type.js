@@ -1,9 +1,8 @@
-{/*
-::: YOU MUST HAVE AN ELEMENT LIKE THIS TO MAKE THIS FUNCTION WORK!! :::
-    <h3 className="typewrite" data-period="1300" data-type='[ "data", "data", "data", "data" ]'>
-        <span className="wrap"></span>
-    </h3>
-*/}
+// ::: YOU MUST HAVE AN ELEMENT LIKE THIS TO MAKE THIS FUNCTION WORK!! :::
+//     <h3 className="typewrite" data-period="1300" data-type='[ "data", "data", "data", "data" ]'>
+//         <span className="wrap"></span>
+//     </h3>
+
 
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
