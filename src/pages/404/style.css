@@ -1,0 +1,21 @@
+@import url('https://rodcordeiro.github.io/shares/fonts/TheAbsolute/font.css');
+
+.Page404{
+	height:80vh;
+	width: 80%;
+	margin: 5% auto;
+	display: flex;
+	flex:1;
+	flex-direction: column;
+	background-color: #f1f3f6;
+}
+
+
+@media  screen and (max-width: 768px) {
+	.Page404{
+		height:auto;
+		width: 100%;
+		margin:0;
+		flex-direction: column;
+	}
+}
