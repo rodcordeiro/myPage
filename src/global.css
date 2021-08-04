@@ -1,19 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto|Roboto+Slab|Source+Code+Pro&display=swap');
+@import url('https://rodcordeiro.github.io/shares/fonts/sketch-gothic-school/font.css');
+@import url('https://rodcordeiro.github.io/shares/fonts/Square721BT-Roman/font.css');
 /*
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
 font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Source Code Pro', monospace;
+font-family: 'Sketch Gothic School';
 */
+/* 
+#8a2be2 blueviolet
+#556b2f darkolivegreen
+#a0ebcf
+#014871
+#22282b
+ */
+
+:root{
+    --header-bg-color: #333;
+}
+
 
 *{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	color: #22282b;
 }
 body{
-	background-color: #22282b;
 	height: 100vh;
 }
 

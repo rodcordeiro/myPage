@@ -1,0 +1,93 @@
+@import url('https://rodcordeiro.github.io/shares/fonts/TheAbsolute/font.css');
+#alert{
+	color: black;
+	background-color: white;
+	border: 10px solid red;
+	border-top-width: 25px;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	font-size: 2em;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-family: 'The absolute', sans-serif;
+}
+
+.mainContent{
+	height:80vh;
+	width: 80%;
+	margin: 5% auto;
+	display: flex;
+	flex:1;
+	flex-direction: row;
+	background-color: #f1f3f6;
+}
+
+img{
+	height:100%;
+	width: auto;
+}
+#data {
+	flex-wrap: wrap;
+	width: auto;
+	margin: 20px;
+}
+#data h2{
+	font-size: 40px;
+	font-family: 'Source Code Pro', monospace;
+	padding: 10px;
+}
+#data h3{
+	margin-top: 5px;
+}
+#data h3::before{
+	content: '→';
+	position: relative;
+	top: -2px;
+}
+#data p{
+	font-family: 'Source Code Pro', monospace;
+	text-align: justify;
+	padding: 20px;
+}
+#data p::first-letter{
+	font-size:18px ;
+}
+.typewrite .wrap {
+	font-family: 'Roboto Slab', serif;
+	border-right: 0.1em solid #000;
+}
+
+
+#contatos{
+	width: 80%;
+	margin: 20px ;
+}
+.contact{
+	padding: 5px 10px;
+}
+@media  screen and (max-width: 768px) {
+	.mainContent{
+		height:auto;
+		width: 100%;
+		margin:0;
+		flex-direction: column;
+	}
+
+	.mainContent img{
+		height: auto;
+		width: 70%;
+		margin: 20px auto;
+	}
+	.mainContent #data {
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 90%;
+		}
+	#alert{
+		top: 5%;
+		left: 5%;
+		padding: 2px 5px;
+		
+	}	
+}
