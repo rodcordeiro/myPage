@@ -1,8 +1,8 @@
 {
   "name": "rod_homepage",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "author":"Rodrigo Cordeiro <rodrigomendoncca@gmail.com> (http://rodcordeiro.com.br)",
+  "author": "Rodrigo Cordeiro <rodrigomendoncca@gmail.com> (http://rodcordeiro.com.br)",
   "repository": "github:rodcordeiro/myPage",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
