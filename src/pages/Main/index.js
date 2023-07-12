@@ -35,7 +35,7 @@ export default function MainPage(){
                     descobri a paixão por desenvolvimento nas aulas de desenvolvimento Web
                     do curso técnico em Comunicação Visual e desde então tenho me apaixonado cada vez mais por ver através da matrix.
                 </p>
-                <span id="alert" onClick={()=>history.push('/login')}>Este site ainda está em construção</span>
+                <span id="alert" onClick={()=>history.push('/login')}>Este site ainda está em construção... E continua :)</span>
                 <div id="contatos">
                 <div className="contact"> 
                         <a href="mailto:rodrigomendoncca@gmail.com">
